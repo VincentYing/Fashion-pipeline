@@ -9,33 +9,35 @@ Proposed architecture
 Data: Talk in Numbers (size, volume, complexity)
 --->
 
-##### Project Idea
+#### Project Idea
 
 This project will perform image ingestion, processing, and analysis, with person detection as the specific use case.
 
+[Slides](http://bit.ly/ppl-strm)
+
 <hr/>
 
-##### Technologies
+#### Technologies
 
 Kafka will be used for picture ingestion.
 
 Spark will be used for image processing.
 
-A pretrained Tensorflow model will be used for person detection. [Human Detection](https://medium.com/@madhawavidanapathirana/real-time-human-detection-in-computer-vision-part-2-c7eda27115c6)
+A pretrained Tensorflow model will be used for person detection. [Person Detection](https://medium.com/@madhawavidanapathirana/real-time-human-detection-in-computer-vision-part-2-c7eda27115c6)
 
 Cassandra will be used for image store.
 
-Flask will be used for display of picture and classification statistics.
+Flask will be used for display classification statistics.
 
 <hr/>
 
-##### Architecture
+#### Architecture
 
 ![Image Pipeline](https://raw.githubusercontent.com/VincentYing/image-pipeline/master/data-pipeline.png)
 
 <hr/>
 
-##### Data
+#### Data
 
 ImageNet will be used as a data source.
 * Size of dataset is 14,197,122 images with 952k containing people.
