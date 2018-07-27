@@ -31,7 +31,7 @@ Flask will be used for display of picture and classification statistics.
 
 ##### Architecture
 
-![Image Pipeline](https://github.com/VincentYing/image-pipeline/data-pipeline.png)
+![Image Pipeline](https://raw.githubusercontent.com/VincentYing/image-pipeline/master/data-pipeline.png)
 
 <hr/>
 
