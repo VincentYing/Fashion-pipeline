@@ -51,4 +51,3 @@ Flask displays top 3 predictions
 
 The main challenge of this project is the construction of a pipeline to pass images through for classification.
 
-<hr/>
