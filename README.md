@@ -15,7 +15,7 @@ Project purpose is to figure out what other people are wearing directly from ima
 
 Useful for keeping in style and tracking fashion trends.
 
-[Slides](http://bit.ly/style-strm)
+[Slides](http://bit.ly/fashion-ppt)
 
 <hr/>
 
@@ -29,7 +29,7 @@ ImageNet will be used as a data source.
 
 #### Architecture
 
-![Image Pipeline](https://raw.githubusercontent.com/VincentYing/image-pipeline/master/data-pipeline.png)
+![Image Pipeline](https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/data-pipeline.png)
 
 <hr/>
 
@@ -50,4 +50,3 @@ Flask displays top 3 predictions
 #### Challenges
 
 The main challenge of this project is the construction of a pipeline to pass images through for classification.
-
