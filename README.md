@@ -11,29 +11,11 @@ Data: Talk in Numbers (size, volume, complexity)
 
 #### Project Idea
 
-This project will perform image ingestion, processing, and analysis, with person detection as the specific use case.
+Project purpose is to figure out what other people are wearing directly from images.
 
-[Slides](http://bit.ly/ppl-strm)
+Useful for keeping in style and tracking fashion trends.
 
-<hr/>
-
-#### Technologies
-
-Kafka will be used for picture ingestion.
-
-Spark will be used for image processing.
-
-A pretrained Tensorflow model will be used for person detection. [Person Detection](https://medium.com/@madhawavidanapathirana/real-time-human-detection-in-computer-vision-part-2-c7eda27115c6)
-
-Cassandra will be used for image store.
-
-Flask will be used for display classification statistics.
-
-<hr/>
-
-#### Architecture
-
-![Image Pipeline](https://raw.githubusercontent.com/VincentYing/image-pipeline/master/data-pipeline.png)
+[Slides](http://bit.ly/style-strm)
 
 <hr/>
 
@@ -43,24 +25,30 @@ ImageNet will be used as a data source.
 * Size of dataset is 14,197,122 images with 952k containing people.
 * Dataset will be loaded locally onto the nodes used for ingestion.
 
-<!---
-[Slides](https://docs.google.com/presentation/d/13n7iXGRkSrlzq3qGVe7PxvjCXLRpoNGjvC3pnGv_U3A/edit?usp=sharing)
+<hr/>
+
+#### Architecture
+
+![Image Pipeline](https://raw.githubusercontent.com/VincentYing/image-pipeline/master/data-pipeline.png)
 
 <hr/>
 
+#### Technologies
 
-## How to install and get it up and running
+Kafka ingests pictures of people
 
+Spark processes image
+
+Pretrained TF model recognizes clothing ([Model](https://www.deepdetect.com/applications/model/))
+
+Cassandra stores top 3 predictions
+
+Flask displays top 3 predictions
 
 <hr/>
 
-## Introduction
+#### Challenges
 
-## Architecture
+The main challenge of this project is the construction of a pipeline to pass images through for classification.
 
-## Dataset
-
-## Engineering challenges
-
-## Trade-offs
---->
+<hr/>
