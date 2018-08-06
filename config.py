@@ -1,4 +1,4 @@
-MODEL_DIR = '/home/ubuntu/MLwatch/ml_model'
+MODEL_DIR = '/home/ubuntu/fashion-pipeline/model'
 IMAGES_DIR= '/home/ubuntu/ILSVRC/Data/DET/test'
 KAFKA_CONFIG = {
                 'topic'  : 'demo',
