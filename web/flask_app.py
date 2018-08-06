@@ -1,8 +1,12 @@
-import os
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import json
 import time
-from kafka import KafkaConsumer
+import config
+
 from flask import Flask, Response, render_template
+from cassandra.cluster import Cluster
 
 
 ROOT = os.getenv('HOME') + '/'
@@ -52,6 +56,15 @@ def topic(topic):
     """
     return render_template('topic.html')
 
+@app.route('/topic')
+    cluster = Cluster(config.CASS_CLUSTER)
+    session = cluster.connect()
+    session.set_keyspace(KEYSPACE)
+
+    cql = 'select * FROM clothes LIMIT 1;'
+    row = session.execute(cql)
+    
+    return render_template('topic.html', info=row)
 
 @app.route('/')
 def index():
