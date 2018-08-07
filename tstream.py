@@ -1,17 +1,21 @@
 import os
 import config
+
 # Spark
 os.environ['PYSPARK_PYTHON']='python'
 os.environ['PYSPARK_DRIVER_PYTHON']='python'
 from pyspark import SparkContext
 from pyspark.streaming import StreamingContext
 from pyspark.streaming.kafka import KafkaUtils
+
 # Kafka
 from kafka import KafkaConsumer
 import json
+
 # Tensorflow
 import tensorflow as tf
 from tensorflow.python.platform import gfile
+
 # Cassandra
 import pyspark_cassandra
 import logging
@@ -44,6 +48,7 @@ log.info("setting keyspace...")
 session.set_keyspace(KEYSPACE)
 
 update_stats = session.prepare("UPDATE stats SET count = count + ?, acc_score = acc_score + ? WHERE prediction = ? ")
+
 
 def sendCassandra(item):
     print("send to cassandra")
@@ -89,7 +94,7 @@ def createContext():
     count_this_batch.pprint()
 
     # Print the path requests this batch
-    reparted = kafkaStream.repartition(96)
+    reparted = kafkaStream.repartition(9)
     #reparted.pprint()
 
     paths  = reparted.map(lambda m: json.loads(m[1])[1])

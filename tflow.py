@@ -23,6 +23,7 @@ def infer(msg, model_data_bc):
                     predictions = sess.run(softmax_tensor, {'DecodeJpeg/contents:0': image_data})
                     predictions = np.squeeze(predictions)
                     top_k = predictions.argsort()[-num_top_predictions:][::-1]
+                    """
                     top_k_probs=[]
                     top_k_names=[]
                     for node_id in top_k:
@@ -30,6 +31,8 @@ def infer(msg, model_data_bc):
                         top_k_names.append(node_id)
                         top_k_probs.append(score)
                     yield (top_k_names[0], (1, top_k_probs[0]))
+                    """
+                    yield (top_k[0], (1, 100*predictions[top_k[0]]))
                 except:
                     err= ('tf_error', (1, 0.0))
                     yield err
@@ -39,7 +42,7 @@ def infer_single(msg):
     with open(image_path, 'rb') as f, \
          open(model_path, 'rb') as m:
         num_top_predictions = 1
-        #reqID         = msg[0]
+
         # Creates a new TensorFlow graph of computation and imports the model
         try:
             image_data = f.read()
