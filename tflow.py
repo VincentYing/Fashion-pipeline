@@ -3,8 +3,8 @@ import tensorflow as tf
 import config
 import os
 
-num_top_predictions = 1
-model_path = os.path.join(config.MODEL_DIR, 'classify_image_graph_def.pb')
+num_top_predictions = 3
+model_path = os.path.join(config.MODEL_DIR, 'clothing-deploy.pb')
 
 def infer(msg, model_data_bc):
     paths = msg

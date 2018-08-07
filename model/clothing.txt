@@ -1,0 +1,304 @@
+303 camisole
+302 array, raiment, regalia
+301 tricorn, tricorne
+300 crash helmet
+299 ensemble
+298 robe
+297 seat belt, seatbelt
+296 parka, windbreaker, windcheater, anorak
+295 cords, corduroys
+294 brace, suspender, gallus
+293 halter
+292 leotard, unitard, body suit, cat suit
+291 overgarment, outer garment
+290 straitjacket, straightjacket
+289 skullcap
+288 turtleneck, turtle, polo-neck
+287 kimono
+286 boater, leghorn, Panama, Panama hat, sailor, skimmer, straw hat
+285 vestment
+284 furnishing, trappings
+283 woman's clothing
+282 black tie
+281 business suit
+280 snap-brim hat
+279 watch cap
+278 petticoat, half-slip, underskirt
+277 battle dress
+276 balaclava, balaclava helmet
+275 sombrero
+274 football helmet
+273 ready-to-wear
+272 costume
+271 belt
+270 bomber jacket
+269 swimsuit, swimwear, bathing suit, swimming costume, bathing costume
+268 headdress, headgear
+267 long trousers, long pants
+266 pantyhose
+265 cardigan
+264 fedora, felt hat, homburg, Stetson, trilby
+263 pedal pusher, toreador pants
+262 sweat suit, sweatsuit, sweats, workout suit
+261 bearskin, busby, shako
+260 pith hat, pith helmet, sun helmet, topee, topi
+259 underwear, underclothes, underclothing
+258 tiara
+257 single-breasted jacket
+256 snowsuit
+255 undies
+254 kameez
+253 maillot
+252 blouse
+251 jumper, pinafore, pinny
+250 polo shirt, sport shirt
+249 sweatshirt
+248 wet suit
+247 uplift
+246 caftan, kaftan
+245 feather boa, boa
+244 mitten
+243 yarmulke, yarmulka, yarmelke
+242 negligee, neglige, peignoir, wrapper, housecoat
+241 nightwear, sleepwear, nightclothes
+240 salwar, shalwar
+239 briefs, Jockey shorts
+238 jump suit, jumpsuit
+237 jodhpurs, jodhpur breeches, riding breeches
+236 swimming trunks, bathing trunks
+235 stocking
+234 headscarf
+233 balldress
+232 kepi, peaked cap, service cap, yachting cap
+231 sheepskin coat, afghan
+230 academic costume
+229 athletic sock, sweat sock, varsity sock
+228 face veil
+227 wraparound
+226 bikini pants
+225 surcoat
+224 Levi's, levis
+223 dirndl
+222 skirt
+221 grass skirt
+220 raglan
+219 tunic
+218 bowler hat, bowler, derby hat, derby, plug hat
+217 shirt
+216 bow tie, bow-tie, bowtie
+215 nylons, nylon stocking, rayons, rayon stocking, silk stocking
+214 picture hat
+213 sweater, jumper
+212 sportswear, athletic wear, activewear
+211 neckwear
+210 ao dai
+209 three-piece suit
+208 kurta
+207 domino, half mask, eye mask
+206 athletic supporter, supporter, suspensor, jockstrap, jock
+205 swallow-tailed coat, swallowtail, morning coat
+204 single-breasted suit
+203 mantilla
+202 shawl
+201 dressing gown, robe-de-chambre, lounging robe
+200 niqab
+199 neckerchief
+198 maxi
+95 argyle, argyll
+94 romper, romper suit
+93 greatcoat, overcoat, topcoat
+92 capote, hooded coat
+91 fur coat
+90 footwear
+89 trouser
+88 dress uniform
+87 singlet, vest, undershirt
+86 sack coat
+85 bodice
+84 millinery, woman's hat
+83 knee pad
+82 toga
+81 tam, tam-o'-shanter, tammy
+80 frock coat
+79 coat
+78 pantie, panty, scanty, step-in
+77 thong
+76 beachwear
+75 short pants, shorts, trunks
+74 attire, garb, dress
+73 beanie, beany
+72 buckskins
+71 legging, leging, leg covering
+70 formalwear, eveningwear, evening dress, evening clothes
+69 dirndl
+68 neckpiece
+67 hand-me-down
+66 cowboy hat, ten-gallon hat
+65 necktie, tie
+64 poncho
+63 maillot, tank suit
+62 hosiery, hose
+61 pajama, pyjama, pj's, jammies
+60 burqa, burka
+59 fur
+58 foul-weather gear
+57 overall, boilersuit, boilers suit
+56 hose
+55 toupee, toupe
+54 corset, girdle, stays
+53 undergarment, unmentionable
+52 overall
+51 dress hat, high hat, opera hat, silk hat, stovepipe, top hat, topper, beaver
+50 caftan, kaftan
+49 gaiter
+48 sweat pants, sweatpants
+47 camisole, underbodice
+46 spacesuit
+21 two-piece, two-piece suit, lounge suit
+20 dinner dress, dinner gown, formal, evening gown
+19 helmet
+18 work-shirt
+17 batting helmet
+16 hot pants
+15 scarf
+14 turban
+13 pants suit, pantsuit
+12 hairpiece, false hair, postiche
+11 man's clothing
+10 beret
+0 G-string, thong
+1 sarong
+2 wig
+3 cocktail dress, sheath
+4 sunhat, sun hat
+5 trench coat
+6 strapless
+7 khimar
+8 crown, diadem
+9 military uniform
+22 street clothes
+23 ski cap, stocking cap, toboggan cap
+24 doublet
+25 abaya
+26 ballet skirt, tutu
+27 porkpie, porkpie hat
+28 cloak
+29 dress suit, full dress, tailcoat, tail coat, tails, white tie, white tie and tails
+30 dashiki, daishiki
+31 bolero
+32 garter belt, suspender belt
+33 jean, blue jean, denim
+34 cavalier hat, slouch hat
+35 bonnet, poke bonnet
+36 hood
+37 chemise, sack, shift
+38 collar
+39 slacks
+40 pullover, slipover
+41 holster
+42 money belt
+43 ball gown
+44 hoopskirt, crinoline
+45 grey, gray
+96 apparel, wearing apparel, dress, clothes
+97 safety belt, life belt, safety harness
+98 sable coat
+99 bathrobe
+100 fur hat
+101 crinoline
+102 knitwear
+103 head covering, veil
+104 kilt
+105 mess jacket, monkey jacket, shell jacket
+106 gown
+107 trouser, pant
+108 tudung
+109 outerwear, overclothes
+110 miniskirt, mini
+111 golf glove
+112 pinstripe
+113 headpiece
+114 coonskin cap, coonskin
+115 pressure suit
+116 Windsor tie
+117 fatigues
+118 slip-on
+119 diaper, nappy, napkin
+120 stretch pants
+121 academic gown, academic robe, judge's robe
+122 tights, leotards
+123 bellbottom trousers, bell-bottoms, bellbottom pants
+124 baseball cap, jockey cap, golf cap
+125 jacket
+126 Christmas stocking
+127 pillbox, toque, turban
+128 knee-high, knee-hi
+129 costume
+130 panty girdle
+131 hard hat, tin hat, safety hat
+132 chador, chadar, chaddar, chuddar
+133 sundress
+134 blue
+135 cowl
+136 bridal gown, wedding gown, wedding dress
+137 chemise, shimmy, shift, slip, teddy
+138 elbow pad
+139 tea gown
+140 fez, tarboosh
+141 hat, chapeau, lid
+142 black
+143 drawers, underdrawers, shorts, boxers, boxershorts
+144 spat, gaiter
+145 lab coat, laboratory coat
+146 pajama, pyjama
+147 jersey, T-shirt, tee shirt
+148 khakis
+149 bathing cap, swimming cap
+150 brassiere, bra, bandeau
+151 cloth cap, flat cap
+152 toga virilis
+153 cap
+154 muffler
+155 stole
+156 batting glove
+157 garment
+158 hijab
+159 chasuble
+160 sari, saree
+161 bikini, two-piece
+162 pea jacket, peacoat
+163 fancy dress, masquerade, masquerade costume
+164 outfit, getup, rig, turnout
+165 raincoat, waterproof
+166 nightgown, gown, nightie, night-robe, nightdress
+167 tabi, tabis
+168 gown, robe
+169 dinner jacket, tux, tuxedo, black tie
+170 underpants
+171 mortarboard
+172 coverall
+173 shower cap
+174 lederhosen
+175 glove
+176 Bermuda shorts, Jamaica shorts
+177 cravat
+178 disguise
+179 Afro-wig
+180 kid glove, suede glove
+181 double-breasted suit
+182 cloche
+183 mask
+184 clothing, article of clothing, vesture, wear, wearable, habiliment
+185 diving suit, diving dress
+186 sock
+187 frock
+188 roll-on
+189 dress, frock
+190 suit, suit of clothes
+191 vest, waistcoat
+192 separate
+193 mink, mink coat
+194 bloomers, pants, drawers, knickers
+195 gauntlet, gantlet
+196 apron
+197 lingerie, intimate apparel
