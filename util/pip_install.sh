@@ -7,6 +7,7 @@ pip install gunicorn
 pip install gevent
 pip install tqdm
 pip install ipdb
+pip install s3cmd
 pip install dash
 pip install dash_core_components
 pip install dash_html_components
