@@ -66,12 +66,12 @@ log.info("creating clothes table...")
 session.execute("""
     CREATE TABLE clothes (
         imgId int,
-        imgPath text,
-        top1 text,
+        image text,
+        pred1 text,
         conf1 float,
-        top2 text,
+        pred2 text,
         conf2 float,
-        top3 text,
+        pred3 text,
         conf3 float,
         PRIMARY KEY (imgId)
     )

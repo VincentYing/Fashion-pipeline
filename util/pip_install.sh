@@ -3,6 +3,7 @@ pip install kafka-python
 pip install cassandra-driver
 pip install flask
 pip install flask-cassandra
+pip install flask-cqlalchemy
 pip install gunicorn
 pip install gevent
 pip install tqdm
