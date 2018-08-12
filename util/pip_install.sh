@@ -1,6 +1,11 @@
+#!/bin/bash
+
+sudo apt-get install -y libopencv-dev python-opencv
+
 pip install tensorflow
 pip install kafka-python
 pip install cassandra-driver
+pip install python-opencv
 pip install flask
 pip install flask-cassandra
 pip install flask-cqlalchemy
