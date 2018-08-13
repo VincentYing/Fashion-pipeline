@@ -104,7 +104,8 @@ def createContext():
     #paths.pprint()
 
     inferred = paths.mapPartitions(lambda x: infer(x, model_data_bc))
-    inferred.pprint()
+    #inferred.pprint()
+
     inferred.foreachRDD(lambda rdd: rdd.foreachPartition(sendCassandra))
 
     return ssc

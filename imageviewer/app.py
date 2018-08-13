@@ -6,6 +6,7 @@ from pager import Pager
 import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import config
+import csv
 
 from cassandra.cluster import Cluster
 from flask_cqlalchemy import CQLAlchemy
@@ -27,6 +28,13 @@ app.config.update(
     )
 app.config['UPLOAD_FOLDER'] = '/home/ubuntu/ILSVRC/Data/DET/test/'
 
+# Set clothing id lookup table
+with open('clothing.csv') as f:
+    reader = csv.reader(f)
+    next(reader)
+    clothing_dict = dict(reader)
+
+
 # Cassandra
 app.config['CASSANDRA_HOSTS'] = config.CASS_CLUSTER
 app.config['CASSANDRA_KEYSPACE'] = config.KEYSPACE
@@ -34,7 +42,7 @@ db = CQLAlchemy(app)
 
 class clothes(db.Model):
     __keyspace__ = config.KEYSPACE
-    imgid = db.columns.Integer(primary_key=True)
+    uid = db.columns.Integer(primary_key=True)
     conf1 = db.columns.Float()
     conf2 = db.columns.Float()
     conf3 = db.columns.Float()
@@ -48,7 +56,9 @@ db.sync_db()
 table = []
 for row in clothes.objects.all():
     row['image'] = os.path.basename(row['image'])
-    table.append(dict(row.items()))
+    row_dict = dict(row.items())
+    row_dict['pred1'] = clothing_dict[row_dict['pred1']])
+    table.append(row_dict)
 
 pager = Pager(len(table))
 
