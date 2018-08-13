@@ -41,31 +41,11 @@ session.execute("""
 log.info("setting keyspace...")
 session.set_keyspace(KEYSPACE)
 
-#log.info("creating table...")
-#session.execute("""
-#    CREATE TABLE logs (
-#        reqID text,
-#        p1 text,
-#        c1 float,
-#        path text,
-#        PRIMARY KEY (reqID)
-#    )
-#    """)
-
-log.info("creating table...")
-session.execute("""
-    CREATE TABLE stats (
-        prediction text,
-        count counter,
-        acc_score counter,
-        PRIMARY KEY (prediction)
-    )
-    """)
 
 log.info("creating clothes table...")
 session.execute("""
     CREATE TABLE clothes (
-        imgId int,
+        uid uuid,
         image text,
         pred1 text,
         conf1 float,
@@ -73,7 +53,7 @@ session.execute("""
         conf2 float,
         pred3 text,
         conf3 float,
-        PRIMARY KEY (imgId)
+        PRIMARY KEY (uid)
     )
     """)
 sys.exit

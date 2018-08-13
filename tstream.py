@@ -43,12 +43,12 @@ IMAGES_DIR    = config.IMAGES_DIR
 KEYSPACE = config.KEYSPACE
 cluster = Cluster(config.CASS_CLUSTER)
 session = cluster.connect()
+dataset_path = '/home/ubuntu/ILSVRC/Data/DET/test/'
 
 log.info("setting keyspace...")
 session.set_keyspace(KEYSPACE)
 
-update_stats = session.prepare("UPDATE stats SET count = count + ?, acc_score = acc_score + ? WHERE prediction = ? ")
-
+insert_stats = session.prepare("INSERT INTO clothes (uid, image, pred1, pred2, pred3, conf1, conf2, conf3) VALUES (now(), ?, ?, ?, ?, ?, ?, ?)") 
 
 def sendCassandra(item):
     print("send to cassandra")
@@ -57,9 +57,12 @@ def sendCassandra(item):
     session.execute('USE ' + config.KEYSPACE)
 
     # batch insert into cassandra database
-    batch = BatchStatement(batch_type=BatchType.COUNTER)
+    batch = BatchStatement(batch_type=BatchType.UNLOGGED)
     for record in item:
-        batch.add(update_stats, (int(record[1][0]), float(record[1][1]), str(record[0]) ))
+        if record[1][0] != "err":
+            batch.add(insert_stats, (str(record[0]), \
+                        str(record[1][0]), str(record[1][1]), str(record[1][2]), \
+                        float(record[2][0]), float(record[2][1]), float(record[2][2])))
 
     session.execute(batch)
     session.shutdown()
@@ -73,7 +76,7 @@ def createContext():
     infer = tflow.infer
 
     model_data_bc = None
-    model_path = os.path.join(MODEL_DIR, 'classify_image_graph_def.pb') #
+    model_path = os.path.join(MODEL_DIR, 'clothing-deploy.pb') #
     with gfile.FastGFile(model_path, 'rb') as f:
         model_data = f.read()
         model_data_bc = sc.broadcast(model_data)
@@ -102,12 +105,7 @@ def createContext():
 
     inferred = paths.mapPartitions(lambda x: infer(x, model_data_bc))
     inferred.pprint()
-
-    # (id, (prediction, accuracy))
-    #reduced = inferred.reduceByKey(lambda x, y: (x[0]+y[0], x[1]+y[1]))
-    #reduced.pprint()
-
-    #reduced.foreachRDD(lambda rdd: rdd.foreachPartition(sendCassandra))
+    inferred.foreachRDD(lambda rdd: rdd.foreachPartition(sendCassandra))
 
     return ssc
 
