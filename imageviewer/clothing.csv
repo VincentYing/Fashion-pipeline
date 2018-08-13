@@ -166,16 +166,16 @@
 12,"hairpiece, false hair, postiche"
 11,man's clothing
 10,beret
-0 G,#NAME?
-1 s,arong
-2 w,ig
-3 c,"ocktail dress, sheath"
-4 s,"unhat, sun hat"
-5 t,rench coat
-6 s,trapless
-7 k,himar
-8 c,"rown, diadem"
-9 m,ilitary uniform
+0,G#NAME?
+1,sarong
+2,wig
+3,"cocktail dress, sheath"
+4,"sunhat, sun hat"
+5,trench coat
+6,strapless
+7,khimar
+8,"crown, diadem"
+9,military uniform
 22,street clothes
 23,"ski cap, stocking cap, toboggan cap"
 24,doublet

@@ -11,12 +11,6 @@ import csv
 from cassandra.cluster import Cluster
 from flask_cqlalchemy import CQLAlchemy
 
-def read_table(url):
-    """Return a list of dict"""
-    # r = requests.get(url)
-    with open(url) as f:
-        return [row for row in csv.DictReader(f.readlines())]
-
 
 APPNAME = "Fast Fashion Classification"
 STATIC_FOLDER = 'example'
@@ -42,7 +36,7 @@ db = CQLAlchemy(app)
 
 class clothes(db.Model):
     __keyspace__ = config.KEYSPACE
-    uid = db.columns.Integer(primary_key=True)
+    uid = db.columns.UUID(primary_key=True)
     conf1 = db.columns.Float()
     conf2 = db.columns.Float()
     conf3 = db.columns.Float()
@@ -57,7 +51,9 @@ table = []
 for row in clothes.objects.all():
     row['image'] = os.path.basename(row['image'])
     row_dict = dict(row.items())
-    row_dict['pred1'] = clothing_dict[row_dict['pred1']])
+    row_dict['pred1'] = clothing_dict[str(row_dict['pred1'])]
+    row_dict['pred2'] = clothing_dict[str(row_dict['pred2'])]
+    row_dict['pred3'] = clothing_dict[str(row_dict['pred3'])]
     table.append(row_dict)
 
 pager = Pager(len(table))
