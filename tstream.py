@@ -43,7 +43,7 @@ IMAGES_DIR    = config.IMAGES_DIR
 KEYSPACE = config.KEYSPACE
 cluster = Cluster(config.CASS_CLUSTER)
 session = cluster.connect()
-dataset_path = '/home/ubuntu/ILSVRC/Data/DET/test/'
+dataset_path = config.IMAGES_DIR
 
 log.info("setting keyspace...")
 session.set_keyspace(KEYSPACE)
