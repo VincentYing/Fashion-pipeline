@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install nginx
+sudo apt-get install -y nginx
 sudo apt-get install -y libopencv-dev python-opencv
 
 pip install tensorflow

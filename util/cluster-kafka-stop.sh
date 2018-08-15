@@ -1,4 +1,3 @@
 #!/bin/bash
-peg service kafka-cluster kafka stop
-peg service kafka-cluster zookeeper stop
+peg service kafka-cluster cassandra stop
 peg stop kafka-cluster
