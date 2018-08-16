@@ -1,10 +1,12 @@
 <table class="table table-striped">
   <tbody>
-    {% for key in ["image", "pred1", "conf1", "pred2", "conf2", "pred3", "conf3"] %}
-    <tr>
-      <td><b>{{ key|e|capitalize }}</b></td>
-      <td>{{ data[key]|e }}</td>
-    </tr>
+    {% for dict_item in [{'filename': 'image'}, {'Prediction 1': 'pred1'}, {'Confidence 1': 'conf1'}, {'Prediction 2': 'pred2'}, {'Confidence 2': 'conf2'}, {'Prediction 3': 'pred3'}, {'Confidence 3': 'conf3'}] %}
+      {% for key, value in dict_item.items() %}
+        <tr>
+          <td><b>{{ key|capitalize }}</b></td>
+          <td>{{ data[value]|e }}</td>
+        </tr>
+      {% endfor %}
     {% endfor %}
   </tbody>
 </table>
