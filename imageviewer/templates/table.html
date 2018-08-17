@@ -1,6 +1,6 @@
 <table class="table table-striped">
   <tbody>
-    {% for dict_item in [{'filename': 'image'}, {'Prediction 1': 'pred1'}, {'Confidence 1': 'conf1'}, {'Prediction 2': 'pred2'}, {'Confidence 2': 'conf2'}, {'Prediction 3': 'pred3'}, {'Confidence 3': 'conf3'}] %}
+    {% for dict_item in [{'filename': 'image'}, {'Prediction 1': 'pred1'}, {'Likelihood 1': 'conf1'}, {'Prediction 2': 'pred2'}, {'Likelihood 2': 'conf2'}, {'Prediction 3': 'pred3'}, {'Likelihood 3': 'conf3'}] %}
       {% for key, value in dict_item.items() %}
         <tr>
           <td><b>{{ key|capitalize }}</b></td>

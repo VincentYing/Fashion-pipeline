@@ -58,10 +58,11 @@ def sendCassandra(item):
     # batch insert into cassandra database
     batch = BatchStatement(batch_type=BatchType.UNLOGGED)
     for record in item:
-        if record[1][0] != "err":
-            batch.add(insert_stats, (str(record[0]), \
-                        str(record[1][0]), str(record[1][1]), str(record[1][2]), \
-                        float(record[2][0]), float(record[2][1]), float(record[2][2])))
+        for i in range(10):
+            if record[1][i][0] != "err":
+                batch.add(insert_stats, (str(record[0][i][0]), \
+                    str(record[1][i][0]), str(record[1][i][1]), str(record[1][i][2]), \
+                    float(record[2][i][0]), float(record[2][i][1]), float(record[2][i][2])))
 
     session.execute(batch)
     session.shutdown()
