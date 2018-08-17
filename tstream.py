@@ -50,19 +50,18 @@ session.set_keyspace(KEYSPACE)
 
 insert_stats = session.prepare("INSERT INTO clothes (uid, image, pred1, pred2, pred3, conf1, conf2, conf3) VALUES (now(), ?, ?, ?, ?, ?, ?, ?)") 
 
-def sendCassandra(batch_in):
+def sendCassandra(item):
     cluster = Cluster(config.CASS_CLUSTER)
     session = cluster.connect()
     session.execute('USE ' + config.KEYSPACE)
 
     # batch insert into cassandra database
     batch = BatchStatement(batch_type=BatchType.UNLOGGED)
-    for item in batch_in:
-        for record in item: 
-            if record[1][0] != "err":
-                batch.add(insert_stats, (str(record[0]), \
-                            str(record[1][0]), str(record[1][1]), str(record[1][2]), \
-                            float(record[2][0]), float(record[2][1]), float(record[2][2])))
+    for record in item:
+        if record[1][0] != "err":
+            batch.add(insert_stats, (str(record[0]), \
+                        str(record[1][0]), str(record[1][1]), str(record[1][2]), \
+                        float(record[2][0]), float(record[2][1]), float(record[2][2])))
 
     session.execute(batch)
     session.shutdown()
@@ -101,7 +100,7 @@ def createContext():
     #paths.pprint()
 
     inferred = paths.mapPartitions(lambda x: infer(x, model_data_bc))
-    inferred.pprint()
+    #inferred.pprint()
 
     inferred.foreachRDD(lambda rdd: rdd.foreachPartition(sendCassandra))
 
