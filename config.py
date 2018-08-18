@@ -1,5 +1,5 @@
 MODEL_DIR = '/home/ubuntu/fashion-pipeline/model'
-IMAGES_DIR= '/home/ubuntu/ILSVRC/Data/DET/test'
+IMAGES_DIR= '/home/ubuntu/Data/test'
 
 KAFKA_CONFIG = {
                 'topic'  : 'demo',
