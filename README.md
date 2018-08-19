@@ -26,7 +26,7 @@ The main motivation for the project is to help deliver image classifications at 
 
 #### Pipeline
 
-![Image Pipeline](https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/images/data-pipeline.png)
+<img src="https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/images/data-pipeline.png" width="800" height="340">
 
 <hr/>
 
