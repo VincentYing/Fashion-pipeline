@@ -59,6 +59,7 @@ The main motivation for the project is to help deliver image classifications at 
     fashion$ ./util/cluster-cassandra-start.sh
 
 3. Initialize Cassandra db:
+
     fashion/cassandra$ python cass_init.py
 
 4. Start Spark job:
