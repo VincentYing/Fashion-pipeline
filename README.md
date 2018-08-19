@@ -51,17 +51,29 @@ The main motivation for the project is to help deliver image classifications at 
 #### Execution
 
 1. Start Kafka/Spark cluster:
-    ./spark/cluster_spark_run.sh
+
+    fashion$ ./util/cluster-spark-start.sh
+
 2. Start Cassandra cluster:
-    ./spark/cluster_cassandra_run.sh
+
+    fashion$ ./util/cluster-cassandra-start.sh
+
 3. Initialize Cassandra db:
-    cassandra$ python cass_init.py
+    fashion/cassandra$ python cass_init.py
+
 4. Start Spark job:
-    spark$ ./spark_cluster_run.sh
+
+    fashion/spark$ ./spark_cluster_run.sh
+
 5. Start Kafka stream:
-    kafka$ ./kafka_run.py
+
+    fashion/kafka$ ./kafka_run.py
+
 6. Start flask to view predictions:
-    imageviewer$ gunicorn app:app  --bind 0.0.0.0:5000 -k gevent -w 8
+
+    fashion/imageviewer$ gunicorn app:app  --bind 0.0.0.0:5000 -k gevent -w 8
+
+<hr/>
 
 #### Challenges
 
