@@ -61,8 +61,7 @@ There were two main challenges to this project:
 * Spark Parameter Tuning
 
   1. Experimented with different repartition() values. RDD partition size of 36 was found to be optimal
-
-  ![Repartition](https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/images/repartition.png)
+    <img src="https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/images/repartition.png" width="480" height="270">
 
   2. Enabled dynamic allocation for Executor creation
 
