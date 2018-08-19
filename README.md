@@ -48,6 +48,21 @@ The main motivation for the project is to help deliver image classifications at 
 
 <hr/>
 
+#### Execution
+
+1. Start Kafka/Spark cluster:
+    ./spark/cluster_spark_run.sh
+2. Start Cassandra cluster:
+    ./spark/cluster_cassandra_run.sh
+3. Initialize Cassandra db:
+    cassandra$ python cass_init.py
+4. Start Spark job:
+    spark$ ./spark_cluster_run.sh
+5. Start Kafka stream:
+    kafka$ ./kafka_run.py
+6. Start flask to view predictions:
+    imageviewer$ gunicorn app:app  --bind 0.0.0.0:5000 -k gevent -w 8
+
 #### Challenges
 
 There were two main challenges to this project:
