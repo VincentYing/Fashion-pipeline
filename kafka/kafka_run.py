@@ -2,8 +2,12 @@
 import os
 import time
 import json
-import config
 from kafka import KafkaProducer
+
+import os, sys
+sys.path.append(os.path.dirname(os.path.abspath('.')) + '/lib')
+import config
+
 
 def main():
     startTime = time.time()

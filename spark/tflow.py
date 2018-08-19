@@ -1,8 +1,11 @@
 import numpy as np
 import tensorflow as tf
-import config
 import os
 import cv2
+
+import os, sys
+sys.path.append(os.path.dirname(os.path.abspath('.')) + '/lib')
+import config
 
 num_top_predictions = 3
 model_path = os.path.join(config.MODEL_DIR, 'clothing-deploy.pb')
@@ -33,7 +36,6 @@ def infer(msg, model_data_bc):
 
                 image_data.append(np_img)
             except:
-                # yield ('Can''t read the image.', ["err", "err", "err"], [0.0, 0.0, 0.0])
                 image_data.append(np.zeros((224,224,3), dtype=int))
 
             if (len(image_data) == 10):
@@ -51,7 +53,6 @@ def infer(msg, model_data_bc):
                         pred.append(pred_k[0:3])
                         conf.append(conf_k)
                 except:
-                    # yield ('tf_error', ["err", "err", "err"], [0.0, 0.0, 0.0])
                     locs = [['tf_error']] * 10
                     pred = [["err", "err", "err"]] * 10
                     conf = [[0.0, 0.0, 0.0]] * 10

@@ -1,6 +1,8 @@
 #! /usr/bin/python
-import sys
+import os, sys
+sys.path.append(os.path.dirname(os.path.abspath('.')) + '/lib')
 import config
+
 # --------------------
 # Cassandra related imports
 
@@ -22,12 +24,14 @@ KEYSPACE = config.KEYSPACE
 
 cluster = Cluster(['localhost'])
 session = cluster.connect()
+
 # HDA out:
 # rows = session.execute("SELECT keyspace_name FROM system.schema_keyspaces")
 # HDA in: Function name change  in Cassandra v3.
 rows = session.execute("SELECT keyspace_name FROM system_schema.keyspaces")
 print(rows[0])
 # HDA done.
+
 if KEYSPACE in [row[0] for row in rows]:
     log.info("dropping existing keyspace...")
     session.execute("DROP KEYSPACE " + KEYSPACE)
@@ -40,7 +44,6 @@ session.execute("""
 
 log.info("setting keyspace...")
 session.set_keyspace(KEYSPACE)
-
 
 log.info("creating clothes table...")
 session.execute("""

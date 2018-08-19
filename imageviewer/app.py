@@ -4,9 +4,8 @@ import requests
 from pager import Pager
 
 import os, sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.abspath('.')) + '/lib')
 import config
-import csv
 
 from cassandra.cluster import Cluster
 from flask_cqlalchemy import CQLAlchemy
@@ -19,7 +18,7 @@ app = Flask(__name__, static_folder=STATIC_FOLDER)
 app.config.update(
     APPNAME=APPNAME,
     )
-app.config['UPLOAD_FOLDER'] = '/home/ubuntu/Data/test/'
+app.config['UPLOAD_FOLDER'] = config.IMAGES_DIR
 
 # Set clothing id lookup table
 with open('clothing.csv') as f:
