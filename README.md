@@ -62,7 +62,7 @@ There were two main challenges to this project:
 
   1. Experimented with different repartition() values. RDD partition size of 36 was found to be optimal
 
-  ![Repartition](https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/images/repartition.png){:height="50%" width="50%"}
+  ![Repartition](https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/images/repartition.png)
 
   2. Enabled dynamic allocation for Executor creation
 
