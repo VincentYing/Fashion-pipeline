@@ -15,6 +15,8 @@ The main motivation for the project is to help deliver image classifications at 
 * Imagenet subset containing people will be used as a data source (952k images)
 * Dataset will be loaded locally onto the nodes used for ingestion.
 
+<hr/>
+
 #### Model
 
 * Model is pre-trained GoogleNet (Inception v1) from DeepDetect
@@ -60,7 +62,7 @@ There were two main challenges to this project:
 
   1. Experimented with different repartition() values. RDD partition size of 36 was found to be optimal
 
-  ![Repartition](https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/images/repartition.png)
+  ![Repartition](https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/images/repartition.png){:height="50%" width="50%"}
 
   2. Enabled dynamic allocation for Executor creation
 
@@ -69,5 +71,3 @@ There were two main challenges to this project:
 * Image Batching for TF ingestion
 
   Next, I manually batched 10 images for TF model ingestion. This produced a 4x speedup from 1 to 4 inferences per second.
-
-<hr/>
