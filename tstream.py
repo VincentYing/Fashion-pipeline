@@ -36,14 +36,12 @@ from cassandra.query import BatchType
 KAFKA_TOPIC   = config.KAFKA_CONFIG['topic']
 KAFKA_BROKERS = config.KAFKA_CONFIG['brokers']
 MODEL_DIR     = config.MODEL_DIR
-IMAGES_DIR    = config.IMAGES_DIR
 
 # --------------------
 # Cassandra related initializations:
 KEYSPACE = config.KEYSPACE
 cluster = Cluster(config.CASS_CLUSTER)
 session = cluster.connect()
-dataset_path = config.IMAGES_DIR
 
 log.info("setting keyspace...")
 session.set_keyspace(KEYSPACE)

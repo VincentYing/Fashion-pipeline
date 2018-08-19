@@ -15,12 +15,11 @@ from flask_cqlalchemy import CQLAlchemy
 APPNAME = "Fast Fashion Classification"
 STATIC_FOLDER = 'example'
 
-
 app = Flask(__name__, static_folder=STATIC_FOLDER)
 app.config.update(
     APPNAME=APPNAME,
     )
-app.config['UPLOAD_FOLDER'] = '/home/ubuntu/ILSVRC/Data/DET/test/'
+app.config['UPLOAD_FOLDER'] = '/home/ubuntu/Data/test/'
 
 # Set clothing id lookup table
 with open('clothing.csv') as f:
