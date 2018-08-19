@@ -70,7 +70,7 @@ def createContext():
     sc = SparkContext(appName="TensorStream")
     sc.setLogLevel("ERROR")
     sc.addPyFile('tflow.py')
-    sc.addPyFile('config.py')
+    sc.addPyFile('../lib/config.py')
     import tflow
     infer = tflow.infer
 
