@@ -4,6 +4,7 @@ sudo apt-get install -y nginx
 sudo apt-get install -y libopencv-dev python-opencv
 
 pip install tensorflow
+#pip install tensorflow-gpu
 pip install kafka-python
 pip install cassandra-driver
 pip install python-opencv
