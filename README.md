@@ -1,6 +1,6 @@
 # Fast Fashion Recognition
 
-This project sets up and optimizes an image pipeline for classification of clothing items
+This project optimizes an image pipeline for classification of clothing
 
 #### Motivation
 
@@ -13,7 +13,7 @@ The main motivation for the project is to help deliver image classifications at 
 #### Data
 
 * Imagenet subset containing people will be used as a data source (952k images)
-* Dataset will be loaded locally onto the nodes used for ingestion.
+* Dataset will be loaded locally onto the nodes used for ingestion
 
 <hr/>
 
@@ -42,9 +42,9 @@ The main motivation for the project is to help deliver image classifications at 
 
 #### Setup
 
-* Initially, Kafka/Spark/Cassandra was run on one 4-node cluster.
-* However, Kafka would run out of heap memory and Cassandra for that node would be unreachable.
-* This resulted in separation of the setup into two clusters, one for Kafka/Spark and one for Cassandra.
+* Initially, Kafka/Spark/Cassandra was run on one 4-node cluster
+* However, Kafka would run out of heap memory and Cassandra for that node would be unreachable
+* This resulted in separation of the setup into two clusters, one for Kafka/Spark and one for Cassandra
 
 <hr/>
 
@@ -93,8 +93,11 @@ There were two main challenges to this project:
 
   2. Enabled dynamic allocation for Executor creation
 
-  This resulted in a 2x improvement in inference rate from 0.5 to 1 inference per second.
+    The two adjustments above resulted in a 2x improvement in inference rate from 0.5 to 1 inference per second
+
+  3. Adjusted the number of Kafka partitions to match the number of SPARK_WORKER_CORES (6). This produced a 3x speedup
+
 
 * Image Batching for TF ingestion
 
-  Next, I manually batched 10 images for TF model ingestion. This produced a 4x speedup from 1 to 4 inferences per second.
+  Next, I manually batched 10 images for TF model ingestion. This produced a 4x speedup from 1 to 4 inferences per second
