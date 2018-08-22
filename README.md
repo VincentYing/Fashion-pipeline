@@ -88,14 +88,14 @@ There were two main challenges to this project:
 
 * Spark Parameter Tuning
 
-  1. Experimented with different repartition() values. RDD partition size of 36 was found to be optimal.
+  1. Experimented with different repartition() values. Recommended RDD partition size should be 2 to 3x the number of cores in the cluster. Cluster had 3 workers with 2 cores per worker for a total core count of 6. Actual optimal partition size of 36 was found to yield the highest inference rate.
     <img src="https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/images/repartition.png" width="480" height="270">
 
   2. Enabled dynamic allocation for Executor creation.
 
     The two adjustments above resulted in a 2x improvement in inference rate from 0.5 to 1 inference per second.
 
-  3. Adjusted the number of Kafka partitions to match the number of SPARK_WORKER_CORES (6). This produced a 3x speedup.
+  3. Adjusted the number of Kafka partitions to be slightly above the number of SPARK_WORKER_CORES (9 vs 6 respectively). This produced a 3x speedup.
     <img src="https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/images/kafka_partitions.png" width="480" height="270">
 
 * Image Batching for TF ingestion
