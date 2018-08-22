@@ -96,7 +96,7 @@ There were two main challenges to this project:
     The two adjustments above resulted in a 2x improvement in inference rate from 0.5 to 1 inference per second.
 
   3. Adjusted the number of Kafka partitions to match the number of SPARK_WORKER_CORES (6). This produced a 3x speedup.
-
+    <img src="https://raw.githubusercontent.com/VincentYing/fashion-pipeline/master/images/kafka_partitions.png" width="480" height="270">
 
 * Image Batching for TF ingestion
 
