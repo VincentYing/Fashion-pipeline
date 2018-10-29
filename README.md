@@ -101,3 +101,7 @@ There were two main challenges to this project:
 * Image Batching for TF ingestion
 
   Next, I manually batched 10 images for TF model ingestion. This produced a 4x speedup from 1 to 4 inferences per second.
+
+#### Acknowledgments
+- Without Doğuş Akaydın's guidance and direction, the initial inspiration for this project would not have been possible. ([Related](https://github.com/tjeckleburg/MLwatch))
+- Much thanks to Judit Lantos, Sriram Baskaran, Bastian Haase, and many others at Insight for their helpful advice throughout the project. 
