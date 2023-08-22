@@ -6,7 +6,7 @@ This project optimizes an image pipeline for classification of clothing.
 
 The main motivation for the project is to help deliver image classifications at a faster rate for further use downstream. The particular use case I choose was clothing apparel, which would be useful in the first stage of a recommender system for popular image apps like Instagram. It can be extended to many other verticals, such as furniture and interior design for Pinterest and Houzz.
 
-[Slides](http://bit.ly/fashion_ppt)
+[Slides](http://bit.ly/fashion_slides)
 
 <hr/>
 
